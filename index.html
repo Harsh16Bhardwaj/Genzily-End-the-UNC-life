@@ -1273,6 +1273,44 @@
       animation: fade-in-up 1s ease-out 0.5s backwards;
     }
 
+    /* GitHub Banner */
+    .github-banner {
+      padding: 2rem;
+      text-align: center;
+      position: relative;
+      z-index: 10;
+      background: var(--black);
+      border-top: var(--border-thick);
+      border-bottom: var(--border-thick);
+    }
+
+    .github-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--white);
+      border: var(--border-thick);
+      padding: 1rem 2rem;
+      box-shadow: var(--shadow-brutal);
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-family: var(--font-ui);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--black);
+    }
+
+    .github-badge:hover {
+      transform: translate(-4px, -4px);
+      box-shadow: 12px 12px 0 var(--black);
+      background: var(--cyan);
+    }
+
+    .github-icon {
+      font-size: 1.5rem;
+    }
+
     /* Responsive Animations */
     @media (prefers-reduced-motion: reduce) {
       * {
@@ -1385,6 +1423,15 @@
     <div class="subcopy-box">
       Bro, you're still commenting <span class="highlight">"Great insights!"</span> on every post? That's so <span class="highlight-pink">UNC behavior</span>. Time to level up. GenZ Comment Booster transforms your stiff drafts into fire comments that actually <span class="highlight">resonate with the youth</span>. No cap.
     </div>
+  </section>
+
+  <!-- GitHub Banner -->
+  <section class="github-banner">
+    <a href="https://github.com/Harsh16Bhardwaj/Genzily-End-the-UNC-life" target="_blank" class="github-badge">
+      <span class="github-icon">🐙</span>
+      <span class="github-text">Get Started on GitHub</span>
+      <span class="github-icon">→</span>
+    </a>
   </section>
 
   <!-- Marquee -->
@@ -1599,7 +1646,7 @@
       </div>
     </div>
     <div class="gemini-info-box">
-      <p class="gemini-info-text">⚡ Groq's free tier is INSANE. Lightning-fast inference and basically unlimited requests. Go get your key at <a href="https://console.groq.com/" target="_blank" class="gemini-link">console.groq.com</a></p>
+      <p class="gemini-info-text">⚡ Groq's free tier is INSANE. Lightning-fast inference and basically unlimited requests. Go get your key at <a href="https://console.groq.com/" target="_blank" class="gemini-link">console.groq.com</a> • Then set it up using our <a href="https://github.com/Harsh16Bhardwaj/Genzily-End-the-UNC-life" target="_blank" class="gemini-link">GitHub guide</a></p>
     </div>
   </section>
 
@@ -1609,11 +1656,11 @@
   
     <h2 class="cta-title">Ready to Stop Being Cringe?</h2>
     <p class="cta-sub">Install the extension and start commenting like you actually understand the assignment</p>
-    <a href="#" class="cta-btn">
-      <span>Add to Chrome</span>
+    <a href="https://github.com/Harsh16Bhardwaj/Genzily-End-the-UNC-life" target="_blank" class="cta-btn">
+      <span>View on GitHub</span>
       <span>→</span>
     </a>
-    <p class="cta-note">No login needed. Your drafts stay private. Just vibes.</p>
+    <p class="cta-note">Clone • Setup Locally • Get Free Groq Key • Start Slaying 🔥</p>
   </section>
 
   <!-- Footer -->
