@@ -2,7 +2,7 @@
 
 ## Stop Sounding Like an UNC on LinkedIn ✨
 
-A Chrome extension that transforms your boring LinkedIn comments into GenZ-vibed fire using Gemini AI.
+A Chrome extension that transforms your boring LinkedIn comments into GenZ-vibed fire using Groq AI.
 
 ### Features
 
@@ -13,10 +13,10 @@ A Chrome extension that transforms your boring LinkedIn comments into GenZ-vibed
 
 ### Installation
 
-1. **Get a Free Gemini API Key**
-   - Visit [Google AI Studio](https://makersuite.google.com/app/apikey)
-   - Create a free API key (starts with `AIza`)
-   - Free tier: ~1000 requests/day
+1. **Get a Free Groq API Key**
+   - Visit [Groq Console](https://console.groq.com/)
+   - Create a free API key (starts with `gsk_`)
+   - Free tier: Lightning-fast, basically unlimited
 
 2. **Install the Extension**
    - Open Chrome and go to `chrome://extensions/`
@@ -26,7 +26,7 @@ A Chrome extension that transforms your boring LinkedIn comments into GenZ-vibed
 
 3. **Configure**
    - Click the extension icon
-   - Enter your Gemini API key
+   - Enter your Groq API key
    - Set your default GenZ level and style
 
 ### Usage

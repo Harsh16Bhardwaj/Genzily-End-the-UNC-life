@@ -59,8 +59,8 @@ function setupEventListeners() {
       return;
     }
 
-    if (!apiKey.startsWith('AIza')) {
-      showToast('Invalid API key format (should start with AIza)', 'error');
+    if (!apiKey.startsWith('gsk_')) {
+      showToast('Invalid API key format (Groq keys start with gsk_)', 'error');
       return;
     }
 
