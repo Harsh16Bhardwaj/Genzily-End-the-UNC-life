@@ -1,0 +1,493 @@
+<html lang="en" vid="0"><head vid="1">
+    <meta charset="UTF-8" vid="2">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" vid="3">
+    <title vid="4">GenZify - Cure Corporate Brain Rot</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" vid="5">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" vid="6">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&amp;family=Space+Grotesk:wght@400;700&amp;family=Syne:wght@700;800&amp;family=Rubik+Mono+One&amp;display=swap" rel="stylesheet" vid="7">
+    
+    <style vid="8">
+        :root {
+            --magenta: #FF007F;
+            --cyan: #00E5FF;
+            --yellow: #E4FF00;
+            --green: #39FF14;
+            --black: #080808;
+            --white: #FFFFFF;
+            
+            --font-ui: 'Space Grotesk', sans-serif;
+            --font-display: 'Syne', sans-serif;
+            --font-loud: 'Bangers', cursive;
+            --font-heavy: 'Rubik Mono One', sans-serif;
+            
+            --border-thick: 4px solid var(--black);
+            --shadow-brutal: 8px 8px 0px var(--black);
+            --shadow-brutal-hover: 4px 4px 0px var(--black);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            cursor: crosshair; 
+        }
+
+        body {
+            background-color: var(--cyan);
+            color: var(--black);
+            font-family: var(--font-ui);
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        
+        .hero-section {
+            width: 100%;
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 6rem 2rem;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .acid-bg-shape {
+            position: absolute;
+            z-index: 0;
+        }
+        .shape-1 {
+            top: -10%; left: -5%;
+            width: 110%; height: 100%;
+            background: var(--yellow);
+            clip-path: polygon(0 15%, 100% 0, 95% 85%, 5% 100%);
+        }
+        .shape-2 {
+            bottom: -5%; right: -5%;
+            width: 40%; height: 40%;
+            background: var(--magenta);
+            clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+            opacity: 0.8;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            max-width: 1200px;
+        }
+
+        .label-micro {
+            font-family: var(--font-ui);
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            font-weight: 700;
+            background: var(--black);
+            color: var(--white);
+            padding: 8px 16px;
+            display: inline-block;
+            margin-bottom: 2rem;
+            transform: rotate(-1deg);
+        }
+
+        h1 {
+            font-family: var(--font-display);
+            font-size: clamp(4rem, 12vw, 12rem);
+            line-height: 0.8;
+            text-transform: uppercase;
+            position: relative;
+            margin-bottom: 3rem;
+        }
+
+        .h1-line1 { color: var(--black); display: block; }
+        .h1-line2 { 
+            color: var(--white); 
+            -webkit-text-stroke: 3px var(--black);
+            display: block;
+            font-family: var(--font-loud);
+            font-size: 1.1em;
+            transform: rotate(-2deg);
+            margin: 0.2em 0;
+        }
+        .h1-line3 { 
+            color: var(--magenta); 
+            display: block; 
+            text-shadow: 6px 6px 0px var(--black);
+            -webkit-text-stroke: 1px var(--black);
+        }
+
+        .subcopy-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .subcopy {
+            font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+            font-weight: 700;
+            max-width: 800px;
+            background: var(--white);
+            padding: 2rem;
+            border: var(--border-thick);
+            box-shadow: var(--shadow-brutal);
+            position: relative;
+            line-height: 1.3;
+        }
+
+        .subcopy::before {
+            content: '';
+            position: absolute;
+            top: -20px; left: -20px;
+            width: 40px; height: 40px;
+            background: var(--green);
+            border: 3px solid var(--black);
+            border-radius: 50%;
+        }
+
+        
+        .mockup-section {
+            width: 100%;
+            padding: 4rem 2rem 10rem 2rem;
+            display: flex;
+            justify-content: center;
+            background-color: var(--magenta);
+            background-image: 
+                linear-gradient(45deg, var(--black) 25%, transparent 25%, transparent 75%, var(--black) 75%, var(--black)),
+                linear-gradient(45deg, var(--black) 25%, transparent 25%, transparent 75%, var(--black) 75%, var(--black));
+            background-size: 40px 40px;
+            background-position: 0 0, 20px 20px;
+        }
+
+        .ext-wrapper {
+            position: relative;
+            z-index: 10;
+            transform: scale(1.2);
+            margin-top: 4rem;
+        }
+        
+        .ext-window {
+            width: 400px; 
+            background: var(--white);
+            border: 5px solid var(--black);
+            box-shadow: 20px 20px 0px var(--black);
+            border-radius: 0;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .ext-header {
+            background: var(--black);
+            color: var(--white);
+            padding: 12px 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid var(--black);
+        }
+
+        .ext-title {
+            font-family: var(--font-heavy);
+            font-size: 0.9rem;
+            letter-spacing: -0.05em;
+        }
+        
+        .ext-dots { display: flex; gap: 6px; }
+        .dot { width: 12px; height: 12px; border-radius: 50%; border: 2px solid var(--black); }
+        .dot:nth-child(1) { background: var(--magenta); }
+        .dot:nth-child(2) { background: var(--yellow); }
+        .dot:nth-child(3) { background: var(--cyan); }
+
+        .ext-body {
+            height: 550px;
+            background: var(--white);
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto; 
+        }
+        
+        .ext-body::-webkit-scrollbar { width: 10px; border-left: 3px solid var(--black); }
+        .ext-body::-webkit-scrollbar-thumb { background: var(--magenta); }
+
+        .target-post {
+            background: #f0f0f0;
+            padding: 15px;
+            border-bottom: 3px solid var(--black);
+            font-size: 0.85rem;
+            position: relative;
+        }
+        .target-post-label {
+            position: absolute;
+            top: -10px; right: 15px;
+            background: var(--yellow);
+            border: 2px solid var(--black);
+            font-size: 0.7rem;
+            font-weight: bold;
+            padding: 3px 8px;
+        }
+        .post-author { font-weight: bold; margin-bottom: 4px; display: flex; align-items: center; gap: 6px;}
+        .post-author::before { content:''; width:20px; height:20px; background:var(--cyan); border-radius:50%; border:2px solid var(--black); display:block;}
+        
+        .controls-area {
+            padding: 20px;
+            background: var(--white);
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .vibe-label {
+            font-size: 0.8rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            border-bottom: 3px solid var(--black);
+            padding-bottom: 4px;
+            display: inline-block;
+            margin-bottom: 8px;
+        }
+        
+        .vibe-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 6px;
+        }
+        
+        .vibe-btn {
+            background: var(--white);
+            border: 3px solid var(--black);
+            padding: 10px 4px;
+            font-family: var(--font-ui);
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-align: center;
+        }
+        
+        .vibe-btn.active-genz { background: var(--magenta); color: var(--white); }
+        
+        .custom-input {
+            width: 100%;
+            height: 60px;
+            background: var(--white);
+            border: 3px solid var(--black);
+            font-family: var(--font-ui);
+            font-size: 0.9rem;
+            padding: 10px;
+            resize: none;
+            box-shadow: 4px 4px 0 var(--black);
+        }
+
+        .energy-container {
+            border: 3px solid var(--black);
+            padding: 8px;
+            background: var(--black);
+            position: relative;
+            margin-top: 10px;
+        }
+        .energy-label {
+            color: var(--white);
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            position: absolute;
+            top: -10px; left: 10px;
+            background: var(--black);
+            padding: 0 6px;
+        }
+        .energy-bar-wrap {
+            display: flex;
+            gap: 3px;
+            height: 20px;
+        }
+        .energy-segment {
+            flex-grow: 1;
+            background: #333;
+            transform: skewX(-15deg);
+        }
+        .energy-segment.active { background: var(--green); }
+        .energy-segment.active:nth-child(n+4) { background: var(--magenta); }
+
+        .generate-btn {
+            width: 100%;
+            background: var(--cyan);
+            border: 3px solid var(--black);
+            padding: 15px;
+            font-family: var(--font-heavy);
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            color: var(--black);
+            box-shadow: var(--shadow-brutal);
+            margin-top: 10px;
+        }
+
+        .outputs-container {
+            background: var(--white);
+            border-top: 4px solid var(--black);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .output-card {
+            border: 3px solid var(--black);
+            padding: 12px;
+            font-size: 0.9rem;
+            position: relative;
+            background: var(--white);
+            box-shadow: 4px 4px 0 var(--black);
+        }
+
+        .output-badge {
+            position: absolute;
+            top: -10px; left: -10px;
+            width: 24px; height: 24px;
+            background: var(--magenta);
+            border: 2px solid var(--black);
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 0.8rem; font-weight: bold; color: white;
+        }
+
+        .sticker {
+            position: absolute;
+            font-family: var(--font-heavy);
+            background: var(--green);
+            color: var(--black);
+            padding: 1rem;
+            border: var(--border-thick);
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 1.4rem;
+            line-height: 1;
+            transform: rotate(15deg);
+            top: 5%; right: 5%;
+            box-shadow: 8px 8px 0 var(--black);
+            z-index: 20;
+        }
+
+        .starburst {
+            position: absolute;
+            bottom: 5%; left: 2%;
+            width: 200px;
+            height: 200px;
+            z-index: 5;
+            opacity: 0.2;
+        }
+
+        .tape {
+            position: absolute;
+            background: rgba(255,255,255,0.5);
+            backdrop-filter: blur(4px);
+            width: 140px;
+            height: 35px;
+            top: -15px; left: 50%;
+            transform: translateX(-50%) rotate(-3deg);
+            z-index: 20;
+            border: 1px solid rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body vid="9">
+
+    <section class="hero-section" vid="10">
+        <div class="acid-bg-shape shape-1" vid="11"></div>
+        <div class="acid-bg-shape shape-2" vid="12"></div>
+        
+        <svg class="starburst" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" vid="13">
+            <path d="M50 0L55.5 38.5L95 15L64 50L95 85L55.5 61.5L50 100L44.5 61.5L5 85L36 50L5 15L44.5 38.5L50 0Z" fill="var(--black)" vid="14"></path>
+        </svg>
+
+        <div class="sticker" vid="15">
+            NO<br vid="16">MORE<br vid="17">ROBOTS
+        </div>
+
+        <div class="hero-content" vid="18">
+            <div class="label-micro" vid="19">System Warning: Boring Detected</div>
+            <h1 vid="20">
+                <span class="h1-line1" vid="21">GENZIFY</span>
+                <span class="h1-line2" vid="22">YOUR DUMPSTER FIRE</span>
+                <span class="h1-line3" vid="23">LINKEDIN</span>
+            </h1>
+            
+            <div class="subcopy-container" vid="24">
+                <div class="subcopy" vid="25">
+                    Inject pure unadulterated chaotic energy into corporate networking. Generates tailored comments with calibrated vibe levels so you never have to type "Great insights, Dave!" again.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mockup-section" vid="26">
+        <div class="ext-wrapper" vid="27">
+            <div class="tape" vid="28"></div>
+            
+            <div class="ext-window" vid="29">
+                <div class="ext-header" vid="30">
+                    <div class="ext-title" vid="31">GENZIFY_v1.0.4</div>
+                    <div class="ext-dots" vid="32">
+                        <div class="dot" vid="33"></div><div class="dot" vid="34"></div><div class="dot" vid="35"></div>
+                    </div>
+                </div>
+
+                <div class="ext-body" vid="36">
+                    <div class="target-post" vid="37">
+                        <div class="target-post-label" vid="38">TARGET ACQUIRED</div>
+                        <div class="post-author" vid="39">Dave from Synergy Corp</div>
+                        <div class="post-text" vid="40">Thrilled to announce we are leveraging holistic paradigms to synergize our Q3 deliverables...</div>
+                    </div>
+
+                    <div class="controls-area" vid="41">
+                        <div vid="42">
+                            <span class="vibe-label" vid="43">Select Vibe Level:</span>
+                            <div class="vibe-grid" vid="44">
+                                <button class="vibe-btn active-genz" vid="45">🎉 GEN Z</button>
+                                <button class="vibe-btn" vid="46">⚡ ENERGIZE</button>
+                                <button class="vibe-btn" vid="47">📋 CRISP</button>
+                            </div>
+                        </div>
+
+                        <textarea class="custom-input" placeholder="Add personal context (e.g. 'met at conference')" vid="48"></textarea>
+
+                        <div class="energy-container" vid="49">
+                            <span class="energy-label" vid="50">Gen-Z Aura Strength</span>
+                            <div class="energy-bar-wrap" vid="51">
+                                <div class="energy-segment active" vid="52"></div>
+                                <div class="energy-segment active" vid="53"></div>
+                                <div class="energy-segment active" vid="54"></div>
+                                <div class="energy-segment active" vid="55"></div>
+                                <div class="energy-segment active" vid="56"></div>
+                                <div class="energy-segment" vid="57"></div>
+                                <div class="energy-segment" vid="58"></div>
+                            </div>
+                        </div>
+
+                        <button class="generate-btn" vid="59">GENERATE 🔥</button>
+                    </div>
+
+                    <div class="outputs-container" vid="60">
+                        <div class="output-card" vid="61">
+                            <div class="output-badge" vid="62">1</div>
+                            Nah this slaps asl Dave! 🔥 Leveraging those paradigms fr fr, no cap.
+                        </div>
+                        <div class="output-card" vid="63">
+                            <div class="output-badge" vid="64">2</div>
+                            W update. The synergy is giving main character energy rn. 💅
+                        </div>
+                    </div>
+                </div> 
+            </div> 
+        </div>
+    </section>
+
+</body></html>

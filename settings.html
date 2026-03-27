@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Genzily : why sound like an UNC</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Outfit', 'Segoe UI', system-ui, sans-serif;
+      background: #0f0f1a;
+      color: #ffffff;
+      min-height: 100vh;
+      padding: 32px 24px;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .header-icon {
+      font-size: 48px;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .header h1 {
+      font-size: 28px;
+      font-weight: 700;
+      background: linear-gradient(135deg, #FF6B9D 0%, #C850C0 50%, #FFCC70 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 8px;
+    }
+
+    .header p {
+      color: #a0a0b0;
+      font-size: 16px;
+    }
+
+    .section {
+      background: #1a1a2e;
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+
+    .section-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #a0a0b0;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group:last-child {
+      margin-bottom: 0;
+    }
+
+    label {
+      display: block;
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 8px;
+      color: #ffffff;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="number"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 12px 16px;
+      background: #0f0f1a;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      color: #ffffff;
+      font-family: 'Outfit', sans-serif;
+      font-size: 14px;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      outline: none;
+      border-color: #C850C0;
+      box-shadow: 0 0 0 3px rgba(200, 80, 192, 0.2);
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .helper-text {
+      font-size: 12px;
+      color: #a0a0b0;
+      margin-top: 6px;
+    }
+
+    .helper-text a {
+      color: #FF6B9D;
+      text-decoration: none;
+    }
+
+    .helper-text a:hover {
+      text-decoration: underline;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-family: 'Outfit', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+      border: none;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #FF6B9D 0%, #C850C0 50%, #FFCC70 100%);
+      color: #ffffff;
+    }
+
+    .btn-primary:hover {
+      filter: brightness(1.1);
+      transform: translateY(-1px);
+    }
+
+    .btn-primary:active {
+      transform: translateY(0);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #a0a0b0;
+    }
+
+    .btn-secondary:hover {
+      border-color: rgba(255, 255, 255, 0.4);
+      color: #ffffff;
+    }
+
+    .btn-full {
+      width: 100%;
+    }
+
+    .slider-container {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .slider-container input[type="range"] {
+      flex: 1;
+      -webkit-appearance: none;
+      appearance: none;
+      height: 8px;
+      background: linear-gradient(90deg, #4a5568 0%, #FF6B9D 50%, #FFCC70 100%);
+      border-radius: 4px;
+      border: none;
+      padding: 0;
+    }
+
+    .slider-container input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 24px;
+      height: 24px;
+      background: #ffffff;
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .slider-value {
+      font-size: 32px;
+      font-weight: 700;
+      color: #FF6B9D;
+      min-width: 48px;
+      text-align: center;
+    }
+
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 500;
+      opacity: 0;
+      transition: all 0.3s ease;
+      z-index: 1000;
+    }
+
+    .toast.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+
+    .toast-success {
+      background: #10b981;
+      color: #ffffff;
+    }
+
+    .toast-error {
+      background: #ef4444;
+      color: #ffffff;
+    }
+
+    .about {
+      text-align: center;
+      padding: 24px;
+      color: #a0a0b0;
+      font-size: 13px;
+    }
+
+    .about a {
+      color: #FF6B9D;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <span class="header-icon">✨</span>
+      <h1>GenZ Comment Booster</h1>
+      <p>Configure your vibe settings</p>
+    </div>
+
+    <div class="section">
+      <div class="section-title">AI Configuration</div>
+      <div class="form-group">
+        <label for="apiKey">Gemini API Key</label>
+        <input type="password" id="apiKey" placeholder="Enter your API key (AIza...)">
+        <p class="helper-text">Get a free key at <a href="https://makersuite.google.com/app/apikey" target="_blank">Google AI Studio</a></p>
+      </div>
+      <button class="btn btn-primary btn-full" id="saveApiKey">Save API Key</button>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Default Settings</div>
+      <div class="form-group">
+        <label>Default GenZ Level</label>
+        <div class="slider-container">
+          <input type="range" id="defaultGenZ" min="1" max="100" value="70">
+          <span class="slider-value" id="genzValue">70</span>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="defaultStyle">Default Style</label>
+        <select id="defaultStyle">
+          <option value="replicate">Replicate (Match post energy)</option>
+          <option value="crisp">Crisp (Short & punchy)</option>
+          <option value="exaggerate">Exaggerate (Maximum vibes)</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">System Prompt</div>
+      <div class="form-group">
+        <textarea id="systemPrompt" placeholder="Customize your AI prompt..."></textarea>
+      </div>
+      <button class="btn btn-secondary" id="resetPrompt">Reset to Default</button>
+    </div>
+
+    <div class="about">
+      <p>Version 1.0.0 | Made with 💜 for Vyod</p>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="settings.js"></script>
+</body>
+</html>

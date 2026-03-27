@@ -1,0 +1,444 @@
+/* GenZ Comment Booster - Content Styles */
+
+/* Overlay Button */
+#gz-booster-overlay {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #FF6B9D 0%, #C850C0 50%, #FFCC70 100%);
+  border: none;
+  cursor: pointer;
+  z-index: 999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  box-shadow: 0 0 20px rgba(200, 80, 192, 0.5);
+  animation: pulse-glow 2s ease-in-out infinite;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#gz-booster-overlay:hover {
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 0 30px rgba(200, 80, 192, 0.8);
+}
+
+#gz-booster-overlay:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+#gz-booster-overlay.disabled {
+  background: #555;
+  box-shadow: none;
+  animation: none;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(200, 80, 192, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 35px rgba(200, 80, 192, 0.8), 0 0 50px rgba(255, 107, 157, 0.4);
+  }
+}
+
+/* Dialog Modal */
+#gz-booster-dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  width: 420px;
+  max-width: 90vw;
+  max-height: 90vh;
+  background: #1a1a2e;
+  border-radius: 16px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+  z-index: 1000000;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  overflow: hidden;
+}
+
+#gz-booster-dialog.visible {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+#gz-booster-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 999999;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+#gz-booster-backdrop.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Dialog Header */
+.gz-dialog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.gz-dialog-title {
+  font-size: 18px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #FF6B9D 0%, #C850C0 50%, #FFCC70 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gz-dialog-close {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  border: none;
+  background: transparent;
+  color: #a0a0b0;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+}
+
+.gz-dialog-close:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Dialog Body */
+.gz-dialog-body {
+  padding: 20px;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+/* Post Preview */
+.gz-post-preview {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+  max-height: 120px;
+  overflow: hidden;
+  position: relative;
+}
+
+.gz-post-preview-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #a0a0b0;
+  margin-bottom: 8px;
+}
+
+.gz-post-preview-text {
+  font-size: 14px;
+  color: #e0e0e0;
+  line-height: 1.5;
+}
+
+.gz-post-preview-text.truncated::after {
+  content: '...';
+}
+
+/* Draft Input */
+.gz-draft-section {
+  margin-bottom: 20px;
+}
+
+.gz-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #a0a0b0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.gz-draft-input {
+  width: 100%;
+  height: 80px;
+  background: #0f0f1a;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 14px;
+  padding: 12px;
+  resize: none;
+  transition: border-color 0.2s ease;
+}
+
+.gz-draft-input:focus {
+  outline: none;
+  border-color: #C850C0;
+}
+
+.gz-draft-input::placeholder {
+  color: #555;
+}
+
+/* GenZ Slider */
+.gz-slider-section {
+  margin-bottom: 20px;
+}
+
+.gz-slider-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.gz-slider-value {
+  font-size: 32px;
+  font-weight: 700;
+  color: #FF6B9D;
+  min-width: 48px;
+  text-align: center;
+}
+
+.gz-slider-container {
+  position: relative;
+  height: 8px;
+  background: linear-gradient(90deg, #4a5568 0%, #FF6B9D 50%, #FFCC70 100%);
+  border-radius: 4px;
+}
+
+.gz-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 8px;
+  background: transparent;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+
+.gz-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  background: #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease;
+}
+
+.gz-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+}
+
+.gz-slider::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  background: #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  border: none;
+}
+
+/* Style Toggles */
+.gz-style-section {
+  margin-bottom: 20px;
+}
+
+.gz-style-grid {
+  display: flex;
+  gap: 8px;
+}
+
+.gz-style-btn {
+  flex: 1;
+  padding: 12px 8px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: #a0a0b0;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.gz-style-btn:hover {
+  border-color: rgba(255, 255, 255, 0.4);
+  color: #ffffff;
+}
+
+.gz-style-btn.active {
+  background: linear-gradient(135deg, #FF6B9D 0%, #C850C0 50%, #FFCC70 100%);
+  border-color: transparent;
+  color: #ffffff;
+}
+
+/* Generate Button */
+.gz-generate-btn {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #FF6B9D 0%, #C850C0 50%, #FFCC70 100%);
+  border: none;
+  border-radius: 12px;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: filter 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.gz-generate-btn:hover {
+  filter: brightness(1.1);
+}
+
+.gz-generate-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.gz-spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Dialog Footer */
+.gz-dialog-footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 12px 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.gz-settings-btn {
+  padding: 8px 16px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: #a0a0b0;
+  font-family: inherit;
+  font-size: 13px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+
+.gz-settings-btn:hover {
+  border-color: rgba(255, 255, 255, 0.4);
+  color: #ffffff;
+}
+
+/* Toast Messages */
+.gz-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 1000001;
+  max-width: 90%;
+  text-align: center;
+}
+
+.gz-toast.visible {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+
+.gz-toast.success {
+  background: #10b981;
+  color: #ffffff;
+}
+
+.gz-toast.error {
+  background: #ef4444;
+  color: #ffffff;
+}
+
+.gz-toast.info {
+  background: #C850C0;
+  color: #ffffff;
+}
+
+/* No API Key Warning */
+.gz-no-key {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.gz-no-key-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.gz-no-key-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.gz-no-key-text {
+  font-size: 14px;
+  color: #a0a0b0;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.gz-no-key-btn {
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #FF6B9D 0%, #C850C0 50%, #FFCC70 100%);
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
