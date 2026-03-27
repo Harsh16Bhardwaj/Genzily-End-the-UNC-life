@@ -1,10 +1,10 @@
-# 🔥 GenZ Comment Booster - End the UNC Life
+# 🔥 genzily Comment Booster - End the UNC Life
 
 <div align="center">
 
 **Transform your boring LinkedIn comments into fire with AI. No cap.**
 
-[![GitHub](https://img.shields.io/badge/GitHub-Harsh16Bhardwaj%2FGenzily-181717?logo=github&style=flat-square)](https://github.com/Harsh16Bhardwaj/Genzily-End-the-UNC-life)
+[![GitHub](https://img.shields.io/badge/GitHub-Harsh16Bhardwaj%2Fgenzilyily-181717?logo=github&style=flat-square)](https://github.com/Harsh16Bhardwaj/genzilyily-End-the-UNC-life)
 [![Chrome](https://img.shields.io/badge/Chrome%20Extension-Ready-4285F4?style=flat-square)]()
 [![License](https://img.shields.io/badge/License-Free%20Forever-brightgreen?style=flat-square)]()
 
@@ -12,9 +12,9 @@
 
 </div>
 
-## Why GenZ Comment Booster? 💀
+## Why genzilyily Comment Booster? 💀
 
-Stop sounding like an UNC on LinkedIn. Your comments shouldn't require a thesaurus or sound like you work in HR. **GenZ Comment Booster** uses AI to transform your stiff drafts into authentic, energetic comments that actually resonate with your network.
+Stop sounding like an UNC on LinkedIn. Your comments shouldn't require a thesaurus or sound like you work in HR. **genzily Comment Booster** uses AI to transform your stiff drafts into authentic, energetic comments that actually resonate with your network.
 
 **The Problem:**
 - You spend 10 minutes crafting a LinkedIn comment
@@ -24,7 +24,7 @@ Stop sounding like an UNC on LinkedIn. Your comments shouldn't require a thesaur
 
 **The Solution:**
 - Type your draft (boring or not)
-- Adjust the GenZ vibe level (1-100)
+- Adjust the genzilyily vibe level (1-100)
 - Click Generate Magic ✨
 - Watch it transform into fire
 - Post and watch engagement flow
@@ -36,7 +36,7 @@ Stop sounding like an UNC on LinkedIn. Your comments shouldn't require a thesaur
 | Feature | What It Does |
 |---------|-------------|
 | **⚡ Instant Vibe Check** | Transform drafts in seconds using AI |
-| **🎚️ Calibrated Chaos** | Slider control for GenZ energy (1-100) |
+| **🎚️ Calibrated Chaos** | Slider control for genzilyily energy (1-100) |
 | **🎨 Three Styles** | Crisp, Replicate, Exaggerate - pick your energy |
 | **🔐 Privacy First** | No login, local storage, drafts stay private |
 | **💨 Lightning Fast** | Powered by Groq's free tier API |
@@ -56,11 +56,11 @@ Stop sounding like an UNC on LinkedIn. Your comments shouldn't require a thesaur
 ### Step 1: Clone the Repository
 
 ```bash
-git clone https://github.com/Harsh16Bhardwaj/Genzily-End-the-UNC-life.git
-cd genzily
+git clone https://github.com/Harsh16Bhardwaj/genzilyily-End-the-UNC-life.git
+cd genzilyily
 ```
 
-Or download as ZIP from the [GitHub repo](https://github.com/Harsh16Bhardwaj/Genzily-End-the-UNC-life).
+Or download as ZIP from the [GitHub repo](https://github.com/Harsh16Bhardwaj/genzilyily-End-the-UNC-life).
 
 ### Step 2: Get Your Groq API Key
 
@@ -77,7 +77,7 @@ Or download as ZIP from the [GitHub repo](https://github.com/Harsh16Bhardwaj/Gen
 1. Open Chrome and go to `chrome://extensions/`
 2. Toggle **Developer mode** (top-right corner)
 3. Click **Load unpacked**
-4. Select the `genzily` folder you cloned
+4. Select the `genzilyily` folder you cloned
 5. Extension appears in your toolbar! ✨
 
 ### Step 4: Configure
@@ -85,7 +85,7 @@ Or download as ZIP from the [GitHub repo](https://github.com/Harsh16Bhardwaj/Gen
 1. Click the extension icon in Chrome toolbar
 2. Click ⚙️ (settings)
 3. Paste your Groq API key (gsk_...)
-4. Set your default GenZ level (1-100)
+4. Set your default genzily level (1-100)
 5. Pick your default style (Crisp/Replicate/Exaggerate)
 6. Save and you're done!
 
@@ -111,7 +111,7 @@ Or download as ZIP from the [GitHub repo](https://github.com/Harsh16Bhardwaj/Gen
 ### 1. **Career Professionals**
 > **Problem**: Your LinkedIn comments sound robotic
 > 
-> **Solution**: GenZ mode keeps you professional but adds personality. Stay authentic, not corporate.
+> **Solution**: genzily mode keeps you professional but adds personality. Stay authentic, not corporate.
 > 
 > **Example**: Transform "Thank you for the insights" → "This hits different, great breakdown here fr! 💡"
 
@@ -132,7 +132,7 @@ Or download as ZIP from the [GitHub repo](https://github.com/Harsh16Bhardwaj/Gen
 ### 4. **Job Seekers**
 > **Problem**: Comments are too formal, don't show personality to recruiters
 > 
-> **Solution**: Balanced GenZ mode (50-70) shows you're relatable while staying professional enough.
+> **Solution**: Balanced genzily mode (50-70) shows you're relatable while staying professional enough.
 > 
 > **Example**: Transform "Interested in this role" → "Yo this role is literally what I've been looking for, the tech stack and team vibe is *chef's kiss* 🙌"
 
@@ -145,7 +145,7 @@ Or download as ZIP from the [GitHub repo](https://github.com/Harsh16Bhardwaj/Gen
 
 ---
 
-## 🎚️ GenZ Level Guide
+## 🎚️ genzily Level Guide
 
 | **Range** | **Vibe** | **Best For** | **Example** |
 |-----------|----------|------------|-----------|
@@ -170,7 +170,7 @@ Or download as ZIP from the [GitHub repo](https://github.com/Harsh16Bhardwaj/Gen
 - **Use when**: You want the comment to feel organic to the thread
 
 ### **Exaggerate** 💥
-- Amps up the GenZ energy
+- Amps up the genzily energy
 - Maximum personality and slang
 - Over-the-top enthusiasm
 - **Use when**: You want to stand out and spark engagement
@@ -197,7 +197,7 @@ Or download as ZIP from the [GitHub repo](https://github.com/Harsh16Bhardwaj/Gen
 ## 📁 Project Structure
 
 ```
-genzily/
+genzilyily/
 ├── 📄 manifest.json              # Chrome Extension config
 ├── 📄 README.md                  # This file
 ├── 📄 index.html                 # Landing page
@@ -265,7 +265,7 @@ genzily/
 
 ## 🤝 Contributing
 
-Found a bug? Have an idea? This project lives on [GitHub](https://github.com/Harsh16Bhardwaj/Genzily-End-the-UNC-life).
+Found a bug? Have an idea? This project lives on [GitHub](https://github.com/Harsh16Bhardwaj/genzilyily-End-the-UNC-life).
 
 Ways to contribute:
 - Report bugs in Issues
@@ -287,14 +287,14 @@ Free for personal use. Not for commercial redistribution or resale.
 
 **Special thanks to:**
 - **Groq** for the lightning-fast API
-- The GenZ community for the slang inspiration
+- The genzily community for the slang inspiration
 - LinkedIn for being the testing ground
 
 ---
 
 ## 📞 Support
 
-- **GitHub Issues**: [Report bugs here](https://github.com/Harsh16Bhardwaj/Genzily-End-the-UNC-life/issues)
+- **GitHub Issues**: [Report bugs here](https://github.com/Harsh16Bhardwaj/genzilyily-End-the-UNC-life/issues)
 - **Documentation**: Check SPEC.md for technical details
 - **Questions**: Open a discussion on GitHub
 
@@ -308,7 +308,7 @@ Free for personal use. Not for commercial redistribution or resale.
 
 ### Ready to Stop Sounding Like an UNC? 
 
-**[Clone / Download from GitHub](https://github.com/Harsh16Bhardwaj/Genzily-End-the-UNC-life)** → Get your Groq key → Install locally → Start slaying LinkedIn
+**[Clone / Download from GitHub](https://github.com/Harsh16Bhardwaj/genzilyily-End-the-UNC-life)** → Get your Groq key → Install locally → Start slaying LinkedIn
 
 **No cap.** 🔥
 
